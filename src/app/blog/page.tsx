@@ -8,6 +8,8 @@ import { redirect } from "next/navigation";
 export default async function Blog() {
     const session = await getServerSession(authOptions);
 
+    console.log("SESSION__", session);
+
     if (!session) redirect("/signin?callbackUrl=/blog");
 
     return (

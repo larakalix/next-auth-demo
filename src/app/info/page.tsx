@@ -15,6 +15,8 @@ export default function Info() {
         },
     });
 
+    console.log("SESSION__", session);
+
     if (!session) return <Error />;
 
     return (
